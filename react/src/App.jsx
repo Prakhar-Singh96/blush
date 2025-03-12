@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <div className="bg-purple-500">
-        App.jsx
+        App.jsx  hello 
       </div>
 
     </>
