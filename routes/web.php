@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthenticationController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware(['auth'])->group(function () {
         Route::get('dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+        Route::get('course', [AdminController::class, 'showCourse']);
+        Route::post('add-course', [AdminController::class, 'addCourse']);
     });
 });
 
